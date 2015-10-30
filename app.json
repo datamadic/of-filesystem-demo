@@ -1,0 +1,49 @@
+{
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "filesystem",
+        "description": "OpenFin POC",
+        "url": "http://local:8080",
+        "uuid": "filesystem-uyzeow2cejdims4i",
+        "autoShow": true,
+        "permissions": [
+            // {
+            //     "fileSystem": ["write", "retainEntries", "directory"]
+            // },
+            "storage",
+            "fileSystem"
+        ]
+    },
+    "runtime": {
+        "arguments": "",
+        "version": "beta"
+    },
+    "shortcut": {
+        "company": "OpenFin",
+        "description": "Openfin POC",
+        "name": "filesystem"
+    },
+
+
+    "name": "Filesystem Access Sample",
+    "version": "2.1",
+    "manifest_version": 2,
+    "minimum_chrome_version": "31",
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    },
+    "permissions": [{
+            "fileSystem": ["write", "retainEntries", "directory"]
+        },
+        "storage"
+    ],
+    "file_handlers": {
+        "text": {
+            "types": [
+                "text/*"
+            ]
+        }
+    }
+}
